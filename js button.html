@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        #box{
+            background-color: plum;
+            width: 300px;
+            height: 300px;
+            margin: 10px;
+        }
+        #text{
+            font-size: medium;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <input id="text" type="text" >
+    <div id="box">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, sapiente numquam dolore aut quo, cum obcaecati officia quis officiis minima temporibus expedita dolorum fuga et hic maiores fugiat dolorem. Perspiciatis voluptates suscipit nam animi esse officia, quibusdam eligendi nihil qui ratione iusto ut nisi officiis, laborum et quis sequi velit?</div>
+    <script>
+        var left=0;
+        var up=0;
+        var trgt=document.querySelector("#text");
+    trgt.addEventListener('keydown',function(e){
+        console.clear();
+var k;
+switch (true){
+    case e.ctrlKey:
+        k="CTRL key";
+        break;
+        case e.altKey:
+        k="ALT key";
+        break;
+        case e.shiftKey:
+        k="Shift key";
+        break;
+        default:
+            k="No key";
+            break;
+}
+console.log(k);
+    })
+    var trgt=document.querySelector("#box");
+    trgt.addEventListener('mousedown',function(e){
+        console.clear();
+        var text="You press button : "+e.button;
+        var color;
+        switch (text) {
+            case 0:
+                color="blue";
+                break;
+                case 2:
+                color="red";
+                break;
+                default:
+                    color="tan";
+                    break;
+        }
+        trgt.style.backgroundColor = color;
+        console.log(color);
+        console.log(text);
+
+    });
+document.querySelector("body").addEventListener('keydown',function(e){
+    console.clear();
+    var txt="You press button : "+e.key;
+    switch (e.key) {
+case "ArrowRight":
+    left=left + 5;
+    break;
+    case "ArrowLeft":
+    left=left - 5;
+    break;
+    case "ArrowDown":
+    up=up + 5;
+    break;
+    case "ArrowUp":
+    up=up -  5;
+    break;
+    default:
+    console.log("other key");
+break;
+    }
+var h=document.querySelector("#box");
+h.style.marginLeft=left+"px";
+h.style.marginTop=up+"px";
+
+});
+var t=document.querySelector("#text");
+var b=document.querySelector("#box");
+
+t.addEventListener('copy',function(){
+    console.clear();
+console.log("You copy text");
+t.style.backgroundColor ="lightgreen";
+})
+t.addEventListener('cut',function(){
+    console.clear();
+console.log("You cut text");
+t.style.backgroundColor ="lightblue";
+})
+t.addEventListener('paste',function(){
+    console.clear();
+console.log("You paste text");
+t.style.backgroundColor ="pink";
+})
+b.addEventListener('copy',function(){
+    console.clear();
+console.log("You copy text");
+b.style.backgroundColor ="pink";
+})
+console.log(navigator.onLine);
+    </script>
+</body>
+</html>

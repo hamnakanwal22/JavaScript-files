@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+    <script>
+       var ary = [10,20,30,40,50];
+        var sum = 0;
+        var ay = new Array(3);
+        for(var g = 0;g < 3;g++){
+            ay[g] = prompt("Enter the value : ");
+document.write("<li>" + ay[g] + "</li>")
+
+        }
+
+        
+        document.write("<ul>")
+        for(var a = 0;a <=4;a++){
+document.write("<li>" + ary[a] + "</li>")
+sum = sum + ary[a];
+        }
+        document.write("<ul>")
+            document.write("Total Sum :" + sum);
+var h = [
+    ["Arham",30,"Male","Scorpio"],
+    ["Aspara",19,"Female","Housewife"],
+    ["Zain",20,"Male","Manager"],
+    ["Arsal",40,"Male","Doctor"]
+];
+document.write("<table border='4px',  cellspacing='0'>");
+for(var k =0;k < 4;k++){
+document.write( "<tr>");
+
+for(var b =0;b < 4;b++){
+document.write( "<td>" + h[k][b] + "</td> ");
+h.sort();
+}
+document.write( "</tr>");
+        }
+document.write( "</table>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

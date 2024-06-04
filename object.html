@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object </title>
+    <script>
+        var a = {
+fname : 'Hamna',
+lname : 'Kanwal',
+Age : 18,
+Country : 'Pakistan',
+Email : 'hamna@gmail.com',
+favMovies : ['Dhoom','Kick','Sholay','JPNA'],
+living :{
+    'Country' : 'Pakistan',
+    'City' : 'Rawalpindi'
+},
+Salary : function(){
+    return 25000;
+},
+fullname : function(){
+    return this.fname + " " + this.lname;
+}
+        }
+        console.log(a);
+        document.write(a.Email +"<br>") ;
+        document.write(a.favMovies +"<br>");
+        document.write(a.Salary() +"<br>");
+        document.write(a.fullname() +"<br>");
+        document.write(a.living.City +"<br><br>") ;
+
+var student = [
+    {name : 'Balaj',age : 20},
+    {name : 'Hunain',age : 30},
+    {name : 'Mah rosh',age : 19},
+
+];
+console.log(student);
+for(var b=0;b < student.length;b++){
+    document.write(student[b].name + " " + student[b].age + "<br><br>");
+}
+var obj= {
+    firstName : 'hamna',
+    lastName : 'kanwal',
+    age : 18,
+    Email : 'hiha@gmail.com',
+    City : 'Rawalpindi'
+};
+for(key in obj){
+    document.write( key + " : " + obj[key] + "<br>");
+}
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

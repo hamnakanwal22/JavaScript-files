@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Map method</title>
+    <script>
+        var ary=[10,20,31,36,8];
+        var str = "Javascript is a GREAT Language";
+        var st= "Javascript is a GREAT Language";
+
+var b = ary.map(test);
+document.write(b);
+
+function test(x){
+    return x * 10 ;
+}
+var a= str.replace("Javascript","HTML");
+
+document.write("<br>"+a);
+
+var b= st.charCodeAt(1);
+document.write("<br><br>"+b);
+document.write("<br><br>Number Methods");
+
+var j ="698";
+var num = Number(j);
+document.write("<br>"+num);
+var j ="45.897";
+var num = parseFloat(j);
+document.write("<br>"+num);
+
+
+document.write("<br><br>Math Methods<br>");
+var f = Math.ceil(7.8);
+document.write(f + "<br>");
+var f = Math.max(7,8,100,1000,5000);
+document.write(f + "<br>");
+var f = Math.sqrt(50);
+document.write(f + "<br>");
+var f = Math.pow(7,5);
+document.write(f + "<br>");
+var f = Math.floor(Math.random()*10)+1;
+document.write(f + "<br>");
+var f = Math.PI;
+document.write(f + "<br>");
+document.write("<br> Get Date Methods<br>");
+var d = new Date();
+document.write(d + "<br>");
+document.write(d.toDateString()+"<br>");
+document.write(d.getHours()+"<br>");
+document.write(d.getMinutes()+"<br>");
+document.write(d.getTime()+"<br>");
+document.write(d.getMilliseconds()+"<br>");
+document.write("<br> Set Date Methods<br>");
+ var n = new Date();
+ n.setDate(20);
+document.write(n + "<br>");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

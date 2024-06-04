@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <script>
+/*document.write("<h1>Program: To make a calculator </h1><br>");
+var num1=prompt ("Please enter first number");
+var num2=prompt("Please enter second number");
+var opr=prompt("Please select among +,-,*,/");
+switch (opr){
+    case "+":
+        var res=parseFloat(num1) + parseFloat(num2);
+        document.write(num1+ "+" +num2+ "="+res);
+        break;
+        case "-":
+        var res=parseFloat(num1) - parseFloat(num2);
+        document.write(num1+ "-" +num2+ "="+res);
+        break;
+        case "*": 
+        var res=parseFloat(num1) * parseFloat(num2);
+        document.write(num1+ "*" +num2+ "="+res);
+        break;
+        case "/":
+        var res=parseFloat(num1) / parseFloat(num2);
+        document.write(num1+ "/" +num2+ "="+res);
+        break;
+        default:
+            document.write("Invalid Operator");
+}
+
+document.write("<h1>Program: To check if the number have same last digits</h1><br>");
+var a=prompt("Please enter a number");
+var b=prompt("Please enter b number");
+var c=prompt("Please enter c number");
+var res1=a%10;
+var res2=b%10;
+var res3=c%10;
+if(res1 === res2 && res1 === res3){
+    document.write(a+","+b+","+c+" are having same last digit");
+}else{
+    document.write(a+","+b+","+c+" are not having the same last digit");
+
+}
+document.write("<h1>Program: To print fibonacci sequence</h1><br>");
+var a=0;
+var b=1;
+document.write(a+"<br>");
+document.write(b+"<br>");
+for(var i=0;i<=10;i++){
+    var tem=a + b;
+document.write(tem+"<br>");
+a=b;
+b=tem;
+}
+document.write("<h1>Program: To check armstrong number</h1><br>");
+var number=prompt("Please enter Armstrong number");
+var temp=number;
+var sum=0;
+var noOfDigit=number.toString().length;
+while (temp>0) {
+    var digit=temp%10;
+    sum += digit**noOfDigit;
+    temp=parseInt(temp/10);
+}
+if(sum == number){
+    document.write(number +" is an armstrong number");
+}
+else{
+    document.write(number +" is not an armstrong number");
+
+}
+document.write("<h1>Program: To check armstrong number between interval </h1><br>");
+var a=prompt("Please enter lower number");
+var b=prompt("Please enter upper number");
+
+for(var i=a;i<=b;i++){
+    var temp=i;
+    var sum=0;
+var noOfDigit=i.toString().length;
+
+while (temp>0) {
+    var digit=temp%10;
+    sum += digit**noOfDigit;
+    temp=parseInt(temp/10);
+}
+if(sum == i){
+    document.write( "<br>" +i+"<br>");
+}
+}
+document.write("<h1>Program: To find factor of a no </h1><br>");
+var a=prompt("Please enter number for factor");
+for(var i=1;i<=a;i++){
+    if(a%i==0)
+    document.write( "<br>" +i+"<br>");
+}
+document.write("<h1>Program: To check plaindrome using for loop</h1><br>");
+var string=prompt("please enter string ");
+var len=string.length;
+var msg= " It is a palindrome string";
+for(var i=0;i<len/2;i++){
+    if(string[i] != string[len-1-i]){
+        msg="It is not a palindrome string"
+    }
+}
+document.write(string+ " : "+ msg);
+document.write("<h1>Program: To sort word in alphabetic chracter</h1><br>");
+var string=prompt("please enter string ");
+var stringArray= string.split();
+ var arranged=stringArray.sort();
+console.log(string);
+console.log(stringArray);
+console.log(arranged);
+document.write("this program is show in console");
+document.write("<h1>Program: To replace chracter</h1><br>");
+var reg=new RegExp("red","gi");
+var string="Mr.Balaj has a red car ";
+document.write(string +"<br>");
+var newstring =string.replace(reg,"blue");
+document.write(newstring +"<br>");
+document.write("<h1>Program: To reverse a string using for loop</h1><br>");
+document.write("show in console");
+var string=prompt("please enter string ");
+var strLen =string.length;
+var revstr='';
+for(var i=strLen-1;i>=0;i--){
+revstr += string[i];
+}
+console.log(string+ " reverse is "+ revstr);
+document.write("<h1>Program: To convert first letter of string into upper case</h1><br>");
+document.write("show in console");
+var string=prompt("please enter string ");
+console.log(string );
+var first=string.charAt(0);
+console.log(first);
+console.log(first.toUpperCase() );
+var rem=string.slice(1);
+console.log(rem);
+var caps=first.toUpperCase() + rem;
+console.log(caps);
+document.write("<h1>Program: To find sum of natural no using recursion</h1><br>");
+function sum(num){
+    if(num>0){
+        return num + sum(num-1);
+    }else{
+        return num;
+    }
+}
+var res= sum (20);
+document.write(res);
+document.write("<h1>Program: To check no of occurrness of chracter in string</h1><br>");
+document.write("show in console");
+var string=prompt("please enter string ");
+var letter=prompt("please enter letter ");
+let strLen=string.length;
+var counter=0;
+for(var i=0;i<strLen;i++){
+    if(string[i] == letter){
+        counter++;
+    }
+    console.log(string+ "=>"+ "=>"+ letter+ "="+ counter);
+}
+document.write("<h1>Program: To count no of vowels in string</h1><br>");
+document.write("show in console");
+var string=prompt("please enter string ");
+const reg= /[aeiou]/gi;
+var chr=string.match(reg);
+console.log(chr.join(','));
+console.log(chr.length);
+document.write("<h1>Program: To check a string starts and end with certain chr</h1><br>");
+var string=prompt("please enter string ");
+document.write(string +"<br>");
+var start=string.startsWith("w");
+var end=string.endsWith("e");
+if(start == true && end == true){
+    document.write(string + " starts with w and ends with e");
+}else if(start == true && end == false){
+    document.write(string + " starts with w");
+}else if(start == false && end == true){
+    document.write(string + " ends with e");
+}else  {
+    document.write(string  + " nethier starts with w nor end with e");
+}*/
+document.write("<h1>Program: To check whether a string contain a substring</h1><br>");
+var string=prompt("please enter string ");
+document.write(string +"<br>");
+var substring="The";
+var test1=string.includes(substring);
+document.write(test1 +"<br>");
+var test2=string.indexOf(substring);
+document.write(test2 +"<br>");
+</script>
+</head>
+<body>
+    
+</body>
+</html>

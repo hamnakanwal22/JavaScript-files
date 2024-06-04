@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kms into miles</title>
+    <script>
+function convert(){
+   var kms= document.getElementById("data").value;
+   const factor=0.6212;
+   var miles=kms*factor;
+   document.getElementById("res").innerText =miles + " miles";
+}
+
+function converts(){
+   var c= document.getElementById("datas").value;
+var f=(c*1.82)+32;
+document.getElementById("reslt").innerText=c + "C" + "=" + f +"F";
+}
+function check(){
+    var value =document.getElementById("check").value;
+if(value > 0){
+    resp =value + " is Possive number";
+}
+else if(value < 0){
+    resp =value + " is Negative number";
+}
+else if(value == 0){
+    resp =value + "is Zero";
+}else{
+    resp =value + " is not a number";
+}
+
+    var resp=Math.sign(value);
+    document.getElementById("resp").innerText=resp;
+}
+
+document.write("<h1>Program Random Number</h1><br>");
+    var w =Math.random();
+    document.write("Before Calculation: " + w +"<br>");
+    w=w * (1000-1) + 1;
+    document.write("After Calculation: " + w +"<br>");
+    document.write("floot Calculation: " + Math.floor(w) +"<br>");
+    document.write("<h1>Program to check if no is odd or even</h1><br>");
+    var e =87;
+    if(e%2 == 0){
+        document.write(e + " is an even number<br>");
+    }else{
+        document.write(e + " is an odd number<br>");
+
+    }
+    document.write("<h1>Program: To check if a number is prime or not</h1><br>");
+    var no=prompt("Please enter the number for prime number");
+if(no==1){
+    document.write(no+ "is neither prime nor composite");
+}else if(no < 1){
+    document.write(no+ "is not a prime number");
+}else{
+    for(var i=2;i<no;i++){
+        if(no%i==0){
+            var res=no+ "is not a prime number";
+            break;
+        }else{
+            var res=no+ "is  a prime number";
+
+        }
+    }
+    document.write(res);
+}
+document.write("<h1>Program: To check largest number among three</h1><br>");
+function checks(p,q,r){
+    if(p>=q && p>=r){
+        return p;
+    }else if(q>=p && q>=r){
+        return q;
+    }else {
+        return r;
+    }
+}
+var a=prompt("Please enter the first number");
+var b=prompt("Please enter the second number");
+var c=prompt("Please enter the third number");
+var x=checks(a,b,c);
+document.write(a +","+b +","+c+" : Largest = "+x);
+
+document.write("<h1>Program: To find factorial </h1><br>");
+var number=prompt("Please enter number for factorial");
+var fact=1;
+if(number==0){
+    document.write("The factorial of "+number+"is 1")
+}else if(number < 0){
+    document.write("The factorial of -ve number is not possible");
+}else{
+    for(var i=1;i<=number;i++){
+        fact=fact*i;
+    }
+    document.write("<br>The factorial of "+number +" is"+fact);
+}
+document.write("<h1>Program: To print table</h1><br>");
+function table(number){
+    for(var i=1;i<=10;i++){
+        var res=i*number;
+        document.write("<br>"+number + " * " +i + "=" + res+"<br>");
+    }
+}
+table(6);
+document.write("<br>")
+table(12);
+
+    </script>
+</head>
+<body>
+<h1>Program Convert Kilometer into Miles</h1>
+    <input type="number" name="" step="any" id="data"/> kms
+    <button onclick="convert()">Convert</button> into miles
+    <h1 id="res"></h1><br>
+    <h1>Program Convert Celcius into Farenhite</h1>
+
+    <input type="number" name="" step="any" id="datas"/> celcius
+    <button onclick="converts()">Convert</button> into farenhite
+    <h1 id="reslt"></h1><br>
+    <h1>Program to check no is possitive , negative or zero</h1>
+    <input type="" name="" id="check"/>
+    <button onclick="check()">Check</button>
+    <h1 id="resp"></h1>
+</body>
+</html>

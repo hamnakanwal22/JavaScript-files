@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js methods</title>
+    <script>
+        var a =["hamna",67,"Ics"];
+        var b =["Anas",23,"BS"];
+        var c = a.concat(b);
+
+        document.write(a + "<br>");
+        a.unshift("Name");
+        document.write(a + "<br>");
+        document.write(c + "<br><br>");
+var d =c.join("/");
+document.write(d);
+
+var h =["<br><br>Kazim","Ahan","Roraiz","Arzam"];
+document.write(h + "<br><br>");
+var g=h.indexOf("Roraiz");
+document.write(g + "<br><br>");
+
+var g=h.includes("Ahan");
+document.write(g + "<br><br>");
+
+var ages = [10,13,15,18,20];
+document.write(ages + "<br><br>");
+var k =ages.some(checkAdult);
+document.write(k + "<br><br>");
+var n=ages.find(checkAdult);
+document.write(n + "<br><br>");
+
+function checkAdult (age){
+    return age >= 18;
+}
+var z =["Kazim","Ahan","Roraiz","Arzam"];
+z.forEach(loop);
+function loop(value,index){
+    document.write(index + " : " + value + "<br>");
+}
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

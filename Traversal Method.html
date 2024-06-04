@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travelsal Method</title>
+    <style>
+        #outer{
+            background-color: rgb(202, 161, 108);
+            width: 600px;
+            height: 250px;
+            padding: 10px;
+        }
+        #inner{
+            background: pink;
+            padding: 10px;
+        }
+        
+        #inner div{
+            display: inline-block;
+            border: 1px solid black;
+            background: rgb(196, 236, 245);
+            width: 60px;
+            padding: 10px;
+            margin: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+   <div id="outer">
+    <h2>outer</h2>
+    <div id="inner">
+        <h2>inner</h2>
+        <div>A</div>
+        <div>B</div>
+        <div id="child">C</div>
+        <div>D</div>
+        <div>E</div>
+    </div>
+   </div> 
+<script src="dom.js"></script>
+   
+</body>
+</html>
+ 

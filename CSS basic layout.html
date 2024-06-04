@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>css basic layout design</title>
+        <style>
+            :root{
+                --main-color:pink;
+                --head-font:impact;
+                --p-font:arial;
+            }
+            
+            body{
+                font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background:gray;
+                padding: 0px;
+            }
+           #wrapper{
+            border: 1px solid black;
+            width: 1000px;
+            background: white;
+            margin: 0 auto;
+           }
+          #header{
+            /*background: crimson;*/
+            color: white;
+            height: 100px;
+          }
+          .abc{
+            background: crimson;
+
+          }
+          #header h1{
+            padding: 20px 0 0 20px;
+          }
+          #menu{
+            background: rgb(255, 183, 233);
+          }
+          #menu ul{
+            padding: 0;
+            margin: 0;
+          }
+            #menu li{
+                display: inline-block;
+                padding: 10px 20px;
+                text-decoration: none;
+                color: black;
+ }
+ #menu a{
+       background:crimon;
+       color:black;
+       text-decoration: none;
+       display:inline;
+ }
+ #content{
+    width: 800px;
+    min-height: 500px;
+    padding: 15px;
+    float: left;
+    box-sizing: border-box;
+    color: blue;
+ }
+ #sidebar{
+background: lightblue;
+width: 200px;
+min-height: 500px;
+float: right;
+ }
+ #sidebar a{
+    text-decoration: none;
+    color: black;
+ }
+ #footer{
+background: lightsalmon;
+padding: 5px 10px;
+text-align: right;
+clear: both;
+ }
+        </style>
+    </head>
+    <body>
+<div id="wrapper">
+    <div id="header" style="border: 2px skyblue solid;">
+     </div>
+    <div id="menu">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Contact us</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h2>Basic Layout Design of CSS</h2>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+            It is a long established fact that a reader will be distracted</p>
+            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                It is a long established fact that a reader will be distracted</p>
+    </div>
+    <div id="sidebar">
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">About us</a></li>
+            <li><a href="">Gallery</a></li>
+            <li><a href="">Contact us</a></li>
+        </ul>
+    </div>
+    <div id="footer">
+        hiharajpoot@gmail.com
+    </div>
+</div>
+<script src="dom.js"></script>
+
+    </body>
+</html>
